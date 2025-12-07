@@ -1,0 +1,41 @@
+.mainGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+}
+
+.chipSet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    gap: 1rem;
+}
+
+.chip {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+#chip1 {
+    color: black;
+    background-color: var(--appPurple);
+}
+
+#chip2 {
+    background-color: var(--appBlue);
+}
+
+#chip3 {
+    color: black;
+    background-color: var(--appYellow);
+}
+
+#chip4 {
+    background-color: var(--appRed);
+}
+
+#chip5 {
+    color: black;
+    background-color: var(--appGreen);
+}
