@@ -3,7 +3,7 @@
 html,
 body,
 div {
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 
 body {
@@ -138,9 +138,9 @@ body {
 }
 
 .activeTabItem {
-  -webkit-text-decoration: underline var(--appYellow);
+  -webkit-text-decoration: underline var(--appGreen);
   text-decoration: underline;
-  text-decoration-color: var(--appYellow);
+  text-decoration-color: var(--appGreen);
   text-decoration-thickness: 5px;
   text-underline-offset: 7px;
 }
@@ -153,7 +153,7 @@ body {
 
 .generalContainer {
   margin: 10px;
-  background-color: color-mix(in srgb, var(--appPurple) 15%, transparent);
+  background-color: color-mix(in srgb, var(--appGreen) 15%, transparent);
   border-radius: 10px;
   padding: 10px;
 }
