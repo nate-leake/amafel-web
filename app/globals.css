@@ -1,9 +1,71 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html,
+body,
+div {
+  text-transform: lowercase;
 }
+
+body {
+  min-height: 100dvh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.indented {
+  text-indent: 2em;
+}
+
+
+:root {
+  --appPurple: #9BA0FA;
+  --appYellow: #FFD78D;
+  --appGreen: #6BBF78;
+  --appBlue: #4C8DB8;
+  --appRed: #E87461;
+
+  --displeasure: #BF366F;
+  --unsure: #82A5A8;
+  --pleasure: #F29E02;
+
+  --background: #FFFFFF;
+  --foreground: #171717;
+
+  --material-corner-radius: 0px;
+  --material-padding: 0px;
+  --material-border-width: 1px;
+  --material-blur-thin: 7px;
+  --material-blur-regular: 14px;
+  --material-blur-thick: 21px;
+  --material-blur-ultrathick: 28px;
+  /* backdrop blur amount */
+  --material-saturation: 120%;
+  /* saturation applied to backdrop */
+  --material-contrast: 90%;
+  /* contrast applied to backdrop */
+  --material-noise-opacity: 0.02;
+  /* faint noise overlay (optional) */
+  --material-elevation: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  /* Light defaults (fallbacks if prefers-color-scheme not supported) */
+  --material-bg-light: rgba(255, 255, 255, 0.4);
+  --material-border-light: rgba(255, 255, 255, 0.4);
+  --material-stroke-light: rgba(255, 255, 255, 0.5);
+  /* thin inner highlight */
+  --material-text-light: rgba(0, 0, 0, 0.9);
+
+  /* Dark defaults */
+  --material-bg-dark: rgba(18, 18, 20, 0.3);
+  --material-border-dark: rgba(255, 255, 255, 0.06);
+  --material-stroke-dark: rgba(255, 255, 255, 0.03);
+  --material-text-dark: rgba(255, 255, 255, 0.92);
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -12,15 +74,215 @@
   --font-mono: var(--font-geist-mono);
 }
 
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --material-bg: var(--material-bg-light);
+    --material-border: rgba(255, 255, 255, 0.6);
+    --material-stroke: var(--material-stroke-light);
+    --material-text: var(--material-text-light);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --material-bg: var(--material-bg-dark);
+    --material-border: var(--material-border-dark);
+    --material-stroke: var(--material-stroke-dark);
+    --material-text: var(--material-text-dark);
+
+    --background: #000000;
+    --foreground: #ffffff;
+
+    --appPurple: #7A7EF5;
+    --appYellow: #E0AC48;
+    --appGreen: #4B8F58;
+    --appBlue: #276B92;
+    --appRed: #B33F2E;
+
+    --displeasure: #A5295D;
+    --unsure: #5b7f82;
+    --pleasure: #CC7B01;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --material-blur: 0px;
+    --material-bg-light: rgba(255, 255, 255, 0.94);
+    --material-bg-dark: rgba(18, 18, 20, 0.96);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Geist, Helvetica, Arial, sans-serif;
+  margin-top: 70px;
+}
+
+.HStack {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+.toolBarNavSection {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.activeTabItem {
+  -webkit-text-decoration: underline var(--appYellow);
+  text-decoration: underline;
+  text-decoration-color: var(--appYellow);
+  text-decoration-thickness: 5px;
+  text-underline-offset: 7px;
+}
+
+.marginHorizontal5 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+.generalContainer {
+  margin: 10px;
+  background-color: color-mix(in srgb, var(--appPurple) 15%, transparent);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px 20px;
+}
+
+.sectionTitle {
+    font-size: 40;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sectionSubTitle {
+    font-size: large;
+    font-weight: bold;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.sectionBody{
+    margin-top: 20px;
+}
+
+.sectionBody > p {
+  margin-top: 15px
+}
+
+.material--light {
+  --material-bg: var(--material-bg-light);
+  --material-border: var(--material-border-light);
+  --material-stroke: var(--material-stroke-light);
+  --material-text: var(--material-text-light);
+}
+
+.material--dark {
+  --material-bg: var(--material-bg-dark);
+  --material-border: var(--material-border-dark);
+  --material-stroke: var(--material-stroke-dark);
+  --material-text: var(--material-text-dark);
+}
+
+.material {
+  position: relative;
+  display: block;
+  padding: var(--material-padding);
+  border-radius: var(--material-corner-radius);
+  color: var(--material-text);
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(255, 255, 255, 0.01) 100%), var(--material-bg);
+  box-shadow: var(--material-elevation);
+  overflow: hidden;
+  /* soft 1px border using backdrop + border color */
+  border: var(--material-border-width) solid var(--material-border);
+  /* subtle inner stroke using an inset box-shadow */
+  box-shadow:
+    inset 0 1px 0 var(--material-stroke),
+    0 6px 18px rgba(0, 0, 0, 0.06);
+
+  /* performance tip: promote to its own layer */
+  will-change: backdrop-filter, transform;
+}
+
+/* Optional faint noise overlay to reduce banding (pure CSS way) */
+.material::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(transparent, transparent);
+  opacity: var(--material-noise-opacity);
+  mix-blend-mode: soft-light;
+}
+
+.thin {
+  /* real glass effect — blur the backdrop behind this element */
+  -webkit-backdrop-filter: saturate(var(--material-saturation)) contrast(var(--material-contrast)) blur(var(--material-blur-thin));
+  backdrop-filter: saturate(var(--material-saturation)) contrast(var(--material-contrast)) blur(var(--material-blur-thin));
+}
+
+.regular {
+  /* real glass effect — blur the backdrop behind this element */
+  -webkit-backdrop-filter: saturate(var(--material-saturation)) contrast(var(--material-contrast)) blur(var(--material-blur-regular));
+  backdrop-filter: saturate(var(--material-saturation)) contrast(var(--material-contrast)) blur(var(--material-blur-regular));
+}
+
+.thick {
+  /* real glass effect — blur the backdrop behind this element */
+  -webkit-backdrop-filter: saturate(var(--material-saturation)) contrast(var(--material-contrast)) blur(var(--material-blur-thick));
+  backdrop-filter: saturate(var(--material-saturation)) contrast(var(--material-contrast)) blur(var(--material-blur-thick));
+}
+
+.ultrathick {
+  /* real glass effect — blur the backdrop behind this element */
+  -webkit-backdrop-filter: saturate(var(--material-saturation)) contrast(var(--material-contrast)) blur(var(--material-blur-ultrathick));
+  backdrop-filter: saturate(var(--material-saturation)) contrast(var(--material-contrast)) blur(var(--material-blur-ultrathick));
+}
+
+/* simple content styling */
+.thin-material h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.thin-material p {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.thin-material button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.18);
+  color: inherit;
+  cursor: pointer;
+  backdrop-filter: blur(calc(var(--material-blur)/6));
+}
+
+.fade-element {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  /* Animate opacity over 1 second */
+}
+
+.fade-element.fade-out {
+  opacity: 0;
 }
