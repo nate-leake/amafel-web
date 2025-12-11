@@ -17,13 +17,23 @@ export default function TabBar() {
   return (
     <div className="thin material" style={{ display: "inline-block", borderRadius: 15, margin: 10 }}>
       <div style={{ display: "flex" }} >
-        <Image
-          alt=""
-          src="/favicons/apple-icon-180x180.png"
-          width={50}
-          height={50}
-          style={{ borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }}
-        />
+        
+          <Image
+            className="hidden dark:block"
+            src="/favicons/Dark_apple-icon-180x180.png"
+            alt="dark-mode-image"
+            width={50}
+            height={50}
+            style={{ borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }}
+          />
+          <Image
+            className="block dark:hidden"
+            src="/favicons/Light_apple-icon-180x180.png"
+            alt="light-mode-image"
+            width={50}
+            height={50}
+            style={{ borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }}
+          />
 
         <div style={{
           padding: 10,
