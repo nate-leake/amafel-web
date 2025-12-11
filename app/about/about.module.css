@@ -19,23 +19,25 @@
 
 #chip1 {
     color: black;
-    background-color: var(--appPurple);
+    background-color: var(--copper);
 }
 
 #chip2 {
-    background-color: var(--appBlue);
+    color: black;
+    background-color: var(--light-caramel);
 }
 
 #chip3 {
     color: black;
-    background-color: var(--appYellow);
+    background-color: var(--cornsilk);
 }
 
 #chip4 {
-    background-color: var(--appRed);
+    color: white;
+    background-color: var(--yale-blue);
 }
 
 #chip5 {
-    color: black;
-    background-color: var(--appGreen);
+    color: white;
+    background-color: var(--olive-leaf);
 }
