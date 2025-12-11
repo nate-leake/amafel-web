@@ -1,0 +1,43 @@
+.mainGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+}
+
+.chipSet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    gap: 1rem;
+}
+
+.chip {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+#chip1 {
+    color: black;
+    background-color: var(--copper);
+}
+
+#chip2 {
+    color: black;
+    background-color: var(--light-caramel);
+}
+
+#chip3 {
+    color: black;
+    background-color: var(--cornsilk);
+}
+
+#chip4 {
+    color: white;
+    background-color: var(--yale-blue);
+}
+
+#chip5 {
+    color: white;
+    background-color: var(--olive-leaf);
+}
