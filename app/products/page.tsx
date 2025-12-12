@@ -17,7 +17,7 @@ export default function Products() {
                                 alt="dark-mode-image"
                                 width={180}
                                 height={180}
-                                style={{ borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }}
+                                style={{  }}
                             />
                             <Image
                                 priority
@@ -26,7 +26,7 @@ export default function Products() {
                                 alt="light-mode-image"
                                 width={180}
                                 height={180}
-                                style={{ borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }}
+                                style={{  }}
                             />
                         </a>
                     </div>
