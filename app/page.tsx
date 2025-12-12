@@ -4,7 +4,7 @@ import styles from "./home.module.css"
 export default function Home() {
   return (
     <div>
-      <div className="generalContainer  roundBL  roundBR" style={{ backgroundColor: "var(--olive-leaf)" }}>
+      <div className="generalContainer roundTL roundBL roundTR roundBR" style={{ backgroundColor: "var(--olive-leaf)", marginBottom: "25px" }}>
 
         <div className="sectionHeader" style={{ color: "var(--cornsilk)" }}>
           <p className="sectionTitle">Welcome to Amafel</p>
@@ -42,7 +42,7 @@ export default function Home() {
               <p>Hi there, I'm Nate. Don't mind my cat in the photo. We'll get to her in a bit!</p>
               <p>
                 I'm currently 22 years old and I have a vision for humanity. I want people to have access to mental health resources,
-                financial education, housing, and a life they can enjoy.
+                financial education, and housing. I believe life is something we can (and should) all enjoy, not just survive. 
               </p>
               <p>
                 I know this is an enormous goal. I know I can't do all of this alone. My plan: interdependence. We have to work together to create the world we want.
