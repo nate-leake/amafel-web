@@ -91,7 +91,7 @@ export default function About() {
 
                     <p>
                         After Nate created a basic version of the app (mood), he wanted to learn how to actually distribute it. How do you start a business?
-                        Maybe it was a good idea to attend a business class. That is when Nate found <a className="styledLink" href="https://bizstarts.com/" >BizStarts</a>, a local company in Milwaukee WI.
+                        Maybe it was a good idea to attend a business class. That is when Nate found <a className="styledLink" href="https://bizstarts.com/" target="_blank">BizStarts</a>, a local company in Milwaukee WI.
                     </p>
 
                     <p>
