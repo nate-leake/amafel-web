@@ -175,10 +175,26 @@ body {
 
 
 .generalContainer {
-  margin: 10px;
+  margin: 15px;
   background-color: color-mix(in srgb, var(--light-caramel) 20%, transparent);
   border-radius: 10px;
   padding: 10px;
+}
+
+.roundBR {
+  border-bottom-right-radius: 50px;
+}
+
+.roundBL {
+  border-bottom-left-radius: 50px;
+}
+
+.roundTR {
+  border-top-right-radius: 50px;
+}
+
+.roundTL {
+  border-top-left-radius: 50px;
 }
 
 .section {

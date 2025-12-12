@@ -9,7 +9,7 @@ export default function Products() {
 
                 <div className={`generalContainer ${styles.product}`} style={{backgroundColor: "color-mix(in srgb, var(--appPurple) 15%, transparent)"}}>
                     <div className={`${styles.productImage}`}>
-                        <a href="https://mood-web-blue.vercel.app/">
+                        <a href="https://mood-web-blue.vercel.app/" target="_blank">
                             <Image
                                 priority
                                 className="hidden dark:block"
@@ -17,7 +17,7 @@ export default function Products() {
                                 alt="dark-mode-image"
                                 width={180}
                                 height={180}
-                                style={{ borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }}
+                                style={{  }}
                             />
                             <Image
                                 priority
@@ -26,7 +26,7 @@ export default function Products() {
                                 alt="light-mode-image"
                                 width={180}
                                 height={180}
-                                style={{ borderTopLeftRadius: 15, borderBottomLeftRadius: 15 }}
+                                style={{  }}
                             />
                         </a>
                     </div>
