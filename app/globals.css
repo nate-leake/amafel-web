@@ -181,6 +181,22 @@ body {
   padding: 10px;
 }
 
+.roundBR {
+  border-bottom-right-radius: 50px;
+}
+
+.roundBL {
+  border-bottom-left-radius: 50px;
+}
+
+.roundTR {
+  border-top-right-radius: 50px;
+}
+
+.roundTL {
+  border-top-left-radius: 50px;
+}
+
 .section {
   padding: 20px;
   margin: 20px 20px;
