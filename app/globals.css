@@ -175,7 +175,7 @@ body {
 
 
 .generalContainer {
-  margin: 10px;
+  margin: 15px;
   background-color: color-mix(in srgb, var(--light-caramel) 20%, transparent);
   border-radius: 10px;
   padding: 10px;
